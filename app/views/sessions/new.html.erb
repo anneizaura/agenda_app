@@ -1,0 +1,42 @@
+<div class="container">
+
+  <%= image_tag("mask-group.png") %>
+
+  <h1>Agende sua sessao</h1>
+
+  <h2>Deixe sua sugestao de horario</h2>
+
+  <%= form_for :session, url: "new" do |f|  %>
+
+
+    <p>Sugira uma data</p>
+
+    <h5> Data </h5> <%= f.text_field :date, required: 'required' %><br>
+
+    <p>Sugira um horario</p>
+
+    <h5> Início </h5> <%= f.text_field :start_time, required: 'required' %><br>
+
+    <h5> Término </h5> <%= f.text_field :end_time, required: 'required' %><br>
+
+
+    <p>Utilizar google meets para sessoes</p>
+
+    <a href="https://meet.google.com/">Google Meets</a></p>
+
+    <p>Utilizar zoom</p>
+
+    <a href="https://zoom.us/pt-pt/meetings.html">Zoom</a></p>
+
+    <p>insira o link de sua preferencia</p>
+
+    <%= f.text_field :conference_room %>
+
+    <div class="btn-btn-primary">
+      <%= f.submit "Enviar" %>
+    </div>
+
+  <% end %>
+
+</div>
+
